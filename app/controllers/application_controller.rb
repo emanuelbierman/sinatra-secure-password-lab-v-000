@@ -17,7 +17,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/signup" do
-    binding.pry
     user = User.create(params)
     if user
       redirect '/account'
