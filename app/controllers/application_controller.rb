@@ -50,7 +50,7 @@ class ApplicationController < Sinatra::Base
     else
       redirect '/failure'
     end
-    
+
     # user = User.find_by(:username => params[:username])
   end
 
