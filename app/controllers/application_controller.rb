@@ -19,6 +19,7 @@ class ApplicationController < Sinatra::Base
   post "/signup" do
     binding.pry
     user = User.new(:username => params[:username], :password => params[:password])
+
     if params[:username].blank? || params[:password].blank? || !user.save
       redirect '/failure'
     elsif user.save
