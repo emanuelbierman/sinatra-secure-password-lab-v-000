@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
     user = User.find_by(params)
     if user
       redirect '/account'
-    else 
+    else
       redirect '/failure'
     end
   end
