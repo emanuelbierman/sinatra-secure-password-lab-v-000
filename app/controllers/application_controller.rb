@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
 		if user.save
       session[:user_id] = params[:password]
       redirect '/account'
-    elsif user.username.blank? || user.password.blank?
+    elsif params[:username].blank? || params[:password].blank?
       redirect '/failure'
     end
   end
